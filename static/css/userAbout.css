@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    font-size: 17px;
+}
+
+.container-style {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.img-style {
+
+    vertical-align: middle;
+
+}
+
+.container-style .content {
+    position: absolute;
+    bottom: 0;
+    /* Fallback color */
+    background: rgb(0, 0, 0);
+    /* Blacbackground with 0.5 opacity */
+    background: rgba(0, 0, 0, 0.5);
+    color: #81deeb;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.img-style:hover {
+
+    transform: scale(1.3);
+    transition: transform 2s ease-in-out;
+
+}
+
+.bg-color {
+    background-color: darkgrey;
+}
+
+.text-color {
+    color: rgb(105, 235, 93);
+}
+
+.footer-bg {
+    background-color: lightslategrey;
+}
+
+.custom-text-color:hover {
+    color: white;
+}
+
+.photo-frame {
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-frame:hover .photo {
+    transform: scale(1.2) rotate(45deg);
+    transition: transform 2s ease-in-out;
+
+}
+
+.hover-effect:hover {
+    background-color: rgb(11, 93, 126);
+}
+
+.set-background {
+    background-image: url("/static/images/railway/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.span-text {
+    color: firebrick;
+}

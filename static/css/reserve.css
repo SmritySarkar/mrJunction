@@ -1,0 +1,87 @@
+.register-box {
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.text-design {
+    font-size: 40px;
+    border-bottom: 6px solid #4caf50;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    padding: 13px 0;
+    color: white;
+}
+
+.contents .input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+
+}
+
+.contents .tarikh {
+    margin: 6px;
+    padding: 10px;
+    color: white;
+}
+
+.contents .person {
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+.contents .travel {
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.contents .travel-part {
+    margin: 10px;
+    padding: 10px;
+}
+
+
+
+.button-style {
+    width: 40%;
+    height: 50px;
+    background: none;
+    border: 2px solid #4caf50;
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+
+}
+
+.button-style:hover {
+    background-color: rgb(56, 139, 8);
+
+}
+
+.reset-btn {
+    width: 40%;
+    height: 50px;
+    background: none;
+    border: 2px solid rgb(155, 30, 26);
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px 0;
+}
+
+.reset-btn:hover {
+    background-color: rgb(155, 30, 26);
+    color: white;
+}

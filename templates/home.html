@@ -1,0 +1,263 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Junction</title>
+    <link rel="shortcut icon" type="image/png" href="{% static '/images/logo.png' %}"/>
+
+    {% comment %}----------------------------------------------
+     Stylesheet for this index is given below 
+     ----------------------------------------- {% endcomment %}
+
+     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+       
+   {% comment %} ==========================================
+   Bootstrap CSS Style goes here 
+   ========================================={% endcomment %}
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   {% comment %}=====================
+    font-awesome kit goes here  
+    =================={% endcomment %}
+
+    <script src="https://kit.fontawesome.com/1a65e55d4c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+{% comment %}---------------
+ header goes here  
+ ------------{% endcomment %}
+<header>
+    <nav class="navbar navbar-expand-lg  fixed-top navbar-dark bg-dark mb-2">
+        <div class="container-fluid d-flex justify-content-evenly">
+
+            <div class="brand-logo  ">
+                <a class="navbar-brand fw-bolder " href="#">
+                <img src="{% static 'images/brand-logo.png' %}" alt="" width="50" height="50" class="d-inline-block align-text-top">
+                Mr. Junction
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+             <div class="nav-items">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                        <a class="nav-link  fw-bolder active" aria-current="page" href="/">Home</a>
+                        </li>
+
+                        {% if user.is_authenticated %}
+                        
+                        <li class="nav-item">
+                        <a class="nav-link fw-bolder  " href="book">Reserve Ticket</a>
+                        </li>
+                        
+                        <li class="nav-item ">
+                        <a class="nav-link fw-bolder  " href="#">Bookings</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                        <a class="nav-link fw-bolder  " href="user/logout">Log Out</a>
+                        </li>
+                          
+                        <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#">Hello, {{user.username}}</a>
+                        </li>
+
+                        {% else %}
+
+                         <li class="nav-item">
+                        <a class="nav-link  fw-bolder"   href="user/register">Sign Up</a>
+                        </li>
+                        <li class="nav-item ">
+                        <a class="nav-link fw-bolder"   href="user/login">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link fw-bolder  " href="about">About Us</a>
+                        </li>
+                        
+                        {% endif %}
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </nav>
+
+    {% comment %}============================
+    image slider goes below 
+    ==========================={% endcomment %}
+<section class="container mt-5 " >
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner border-1 rounded-1">
+          <div class="carousel-item active rounded">
+
+            <div class="row  p-5 slider-background bg-gradient d-flex align-items-center justify-content-center ">
+
+              <div class="col-lg-4">
+
+                <h1>Surface railways</h1>
+                <p>With this system, railways are placed above the ground. This is the most widely used rail system on the planet and it’s also among the least expensive. Various mechanisms, such as level crossings, overbridges, and underbridges are provided for crossing the railway, and allow road traffic to flow securely and efficiently across surface railways.</p>
+
+
+                <button  class="custom-button-color">Read More</button>
+              </div>
+
+              <div class="col-lg-8">
+                <img src="{% static 'images/railway/1st.jpg' %}" class="d-block w-100 img-fluid border-1 rounded-1" alt="...">
+            </div>
+            </div> 
+          </div>
+          <!-- new div starts -->
+          <div class="carousel-item">
+
+            <div class="row  p-5 slider-background bg-gradient d-flex align-items-center justify-content-center">
+
+                <div class="col-lg-4">
+  
+                  <h1>Elevated railways</h1>
+                  <p>In this system, railways are placed at a higher or elevated position above the surface. The rail is carried on the steel deck of a continuous viaduct supported on piers, columns, and other structures, usually constructed from steel, cast iron, concrete, or bricks.This system is more expensive than the previous one because stations, waiting rooms, and offices must be built on higher levels, necessitating the usage of staircases, escalators, and other means of transportation.</p>
+  
+                 
+  
+                  <button class="custom-button-color">Read More</button>
+                </div>
+  
+                <div class="col-lg-8">
+                  <img src="{% static 'images/railway/2nd.jpg' %}" class="d-block w-100 img-fluid border-1 rounded-1" alt="...">
+              </div>
+  
+  
+              </div>
+          </div>
+          <div class="carousel-item">
+  
+            <div class="row  p-5 slider-background bg-gradient d-flex align-items-center justify-content-center ">
+
+                <div class="col-lg-4">
+  
+                  <h1>Underground railways</h1>
+                  <p>In this system, the railway is provided below the ground level. Tunnels are built to transport tracks through them, and an overbridge is required to carry road traffic over railway traffic at every road crossing. Due to ventilation issues in tunnels. electricity is the only source of power available for underground railways.</p>
+  
+                  
+  
+                  <button  class="custom-button-color" >Read More</button>
+                </div>
+  
+                <div class="col-lg-8">
+                  <img src="{% static 'images/railway/3rd.jpg' %}" class="d-block w-100 img-fluid border-1 rounded-1" alt="...">
+              </div>
+  
+  
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</section>
+
+</header>
+
+{% comment %}======================================
+ Main section goes here 
+ =================================={% endcomment %}
+<main>
+
+<section>
+<div class="container-fluid mt-4 mb-4 w-75 border-2 rounded-2 hover-effect ">
+<h1 class="text-center fw-bolder p-3 custom-text-color">Welcome to Mr. Junction</h1>
+</div>
+
+<div class="container text-field-bg border-1 rounded-3 p-3 shadow-lg p-3 mb-5 ">
+<div class="row">
+<div class="col-7  d-flex align-items-center justify-content-center">
+<p class="fw-bold text-center">Railway Service is Very Important in day to day life for better and faster transportation of peoples. In this Era the population increased day by day with rapid growth. As there are a vast growth of people, there also need the huge amount of transportation. Railway is faster medium of transportation at low cost. In nowadays we all the peoples and our works ar inclued in online also that's why we build Mr. Junction as the solution of online reserving Railway tickets and make travel more easy. People can easily select their destination and fix their time according to their schedule as well very fast and easy way. </p>
+</div>
+<div class="col-5  d-flex align-items-center justify-content-center">
+<img src="{% static 'images/railway/mr.png' %}" class="d-block w-100 img-fluid border-1 rounded-1" alt="...">
+</div>
+</div>
+</div>
+</section>
+
+{% comment %}========================= 
+Our Services Section goes here 
+======================={% endcomment %}
+
+<section>
+<div class="container-fluid mt-4 mb-4 border-2 rounded-2 hover-effect w-75">
+
+<h1 class="text-center fw-bolder p-3 custom-text-color ">Our Services </h1>
+</div>
+
+<div class="container text-field-bg border-1 rounded-3 p-3 shadow-lg p-3 mb-5 ">
+<div class="row g-3 ">
+
+<div class="col-5  d-flex align-items-center justify-content-center photo-frame">
+<img src="{% static 'images/railway/service.png' %}" class="d-block w-100 img-fluid border-1 rounded-1 photo" alt="...">
+</div>
+<div class="col-7  d-flex align-items-center justify-content-center">
+<p class="fw-bold text-center"> Mr. Junction is a Online Companion of modern people. As it's gave the solution of offline created problems. People can book their tickets by matching destination and their schedule. We peovide the services to people to help them in their travel easily at home. For this online solution people get so many opportunities as they don't need to face the hassels of book a ticket and after a ticket has been booked in offline it can't be cancelled but in online platform it could be happen.  </p>
+</div>
+</div>
+</div>
+
+</section>
+
+</main>
+    
+{% comment %}==============================
+    Footer section Goes here 
+============================{% endcomment %}
+<footer>
+  <div class="container-fluid p-5 footer-bg border-2 rounded-3 r">
+    <div class="container  d-flex align-items-center justify-content-center">
+      <div>
+      <h2 class="fw-bolder">Mr. <span class="span-color">Junction</span></h2>
+      <h4 class="text-center">Our Social Sites</h4>
+
+      {% comment %} social icons  {% endcomment %}
+     <div class="row">
+      <div class="col-3 d-flex align-items-center justify-content-center">
+      <h4><i class="fab fa-facebook-square "></i></h4>
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center">
+      <h4><i class="fab fa-instagram-square "></i></h4>
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center">
+     <h4> <i class="fab fa-telegram "></i></h4>
+      </div>
+      <div class="col-3 d-flex align-items-center justify-content-center">
+     <h4> <i class="fab fa-linkedin"></i></h4>
+      </div>
+      
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+{% comment %}=======================================
+Bootstrap script goes there
+==================================== {% endcomment %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
